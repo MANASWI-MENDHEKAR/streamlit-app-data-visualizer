@@ -12,9 +12,9 @@ An interactive data visualization app powered by multiple large language models 
 
 | LLM Version | Live Demo Link | Model Used |
 |-------------|----------------|------------|
-| 💬 ChatGPT | [Launch ChatGPT App](https://app-app-data-visualizer-rur7dwx7hnjr4ljnspnuou.streamlit.app/)
-| 🔗 Together.ai | [Launch Together App](https://app-app-data-visualizer-jjsc7fywce9jvhgnoy78sg.streamlit.app/) 
-| ✨ Gemini | [Launch Gemini App](https://app-app-data-visualizer-ntchgqxdkb7wtqfex3vrqb.streamlit.app/)
+| 💬 ChatGPT | [Launch ChatGPT App](https://app-app-data-visualizer-rur7dwx7hnjr4ljnspnuou.streamlit.app/)  | `gpt-4-turbo` |
+| 🔗 Together.ai | [Launch Together App](https://app-app-data-visualizer-jjsc7fywce9jvhgnoy78sg.streamlit.app/)  | `together.ai`  |
+| ✨ Gemini | [Launch Gemini App](https://app-app-data-visualizer-ntchgqxdkb7wtqfex3vrqb.streamlit.app/) | `Gemini 1.5` |
 
 > Replace the links above with your actual deployed links.
 
