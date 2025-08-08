@@ -35,17 +35,17 @@ Prompt: {prompt}
     return sanitize_code(response.text)
 
 def main():
-    st.title("🤖📊 Gemini Powered- Data Visualizer")
-    st.write("Upload a CSV file and describe your plot in plain English!")
+    st.title("Gemini Powered Data Visualizer")
+    st.write("Upload a CSV file and describe your plot in plain English.")
 
-    uploaded_file = st.file_uploader("📁 Upload CSV File", type=["csv"])
+    uploaded_file = st.file_uploader("Upload CSV File", type=["csv"])
     if uploaded_file:
         try:
             df = pd.read_csv(uploaded_file)
-            st.subheader("🔍 Data Preview")
+            st.subheader("Data Preview")
             st.dataframe(df.head())
 
-            prompt = st.text_input("🧠 Describe your plot (e.g., 'scatter plot of age vs income by gender')")
+            prompt = st.text_input("Describe your plot (e.g., 'scatter plot of age vs income by gender')")
 
             if st.button("Generate Plot") and prompt.strip():
                 code_output = call_gemini_api(prompt)
@@ -58,18 +58,18 @@ def main():
                         st.pyplot(plt.gcf())
                         plt.clf()
                     else:
-                        st.warning("⚠ Gemini did not return usable plotting code.")
+                        st.warning("Gemini did not return usable plotting code.")
                 except SyntaxError as e:
-                    st.error(f"⚠ Syntax error in generated code: {e}")
+                    st.error(f"Syntax error in generated code: {e}")
                     st.text("Generated code was:\n" + code_output)
                 except Exception as e:
-                    st.warning(f"⚠ Error executing Gemini code: {e}")
+                    st.warning(f"Error executing Gemini code: {e}")
 
             else:
                 st.info("Please enter a plot description and click 'Generate Plot'.")
 
         except Exception as e:
-            st.error(f"❌ Could not read CSV file: {e}")
+            st.error(f"Could not read CSV file: {e}")
 
 if __name__ == "__main__":
     main()
